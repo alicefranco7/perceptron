@@ -10,5 +10,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Verifier la lecture des motifs
+      - name: Verifier la lecture des motifs et le neurone
         run: python -m unittest discover -s tests -v
