@@ -9,7 +9,12 @@ Etape 1 :
 - termine : preparation et lecture des deux motifs binaires (`src/patterns.py`) ;
 - termine : score, decision et correction par la regle du perceptron
   (`src/perceptron.py`), verifies sur le calcul papier du sujet ;
-- a faire : boucle d'apprentissage par epoques, copies bruitees, CSV et figure.
+- termine : apprentissage par epoques, arret a zero erreur ou apres 1000
+  epoques (`src/training.py`) ;
+- a faire : copies bruitees, CSV et figure.
+
+Les previsions et observations du groupe sont dans
+`fiches/predis_avant_de_lancer.md`.
 
 ## Prerequis
 
@@ -33,6 +38,7 @@ Depuis la racine du depot :
 ```bash
 python3 -m src.patterns
 python3 -m src.perceptron
+python3 -m src.training
 python3 -m unittest discover -s tests -v
 ```
 
@@ -43,5 +49,10 @@ La deuxieme refait le calcul papier (x = [1, 0], w = [0.2, -0.1], b = -0.5,
 d = 1 : a = -0.3, y = 0, e = 1, puis w0 = 0.21 et b = -0.49), puis montre une
 seule correction sur chaque motif avec les poids initiaux de graine 42. Les
 reglages (graine, biais initial, pas) sont des constantes en haut du fichier.
+
+La troisieme entraine le neurone sur les deux motifs. Elle affiche une ligne
+par epoque : ordre de presentation, erreurs recomptees a poids figes, biais et
+score de chaque motif. La limite d'epoques (`MAX_EPOCHS`) est en haut de
+`src/training.py`.
 Les tests controlent aussi l'ordre des pixels et le rejet des fichiers invalides.
 Ils sont executes automatiquement sur GitHub a chaque push et pull request.

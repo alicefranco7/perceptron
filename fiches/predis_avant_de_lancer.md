@@ -47,6 +47,8 @@ Questions ajoutées par le groupe, à remplir avant `python3 -m src.training`.
   (Indice : score initial de `un.txt` et variation du score après une
   correction, affichés par `python3 -m src.perceptron`.)
 - L'ordre de présentation change-t-il le résultat ici ? Prévision : ____ Observé : ____
+- Le score de `zero.txt` bouge-t-il, alors que ce motif est déjà bien classé ?
+  De combien par époque, et pourquoi ? Prévision : ____ Observé : ____
 
 ### Journal des essais
 
